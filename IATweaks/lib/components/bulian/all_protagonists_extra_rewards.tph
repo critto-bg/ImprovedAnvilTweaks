@@ -1,0 +1,52 @@
+/// Remove class and kit restrictions from non-essential item drops. ///
+
+SILENT
+
+// Golden Girdle in Watcher's Keep level 4
+COPY_EXISTING ~AR3017.BCS~ ~override\AR3017.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~!Class(Player1,MAGE_ALL)~ ~~
+  END
+
+// Scroll of Memory Boosting in Spellhold
+COPY_EXISTING ~AR1514.BCS~ ~override\AR1514.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY
+      ~Global("Iaitem","AR1514",0)[ %TAB%%LNL%%MNL%%WNL%]+Global("closedDoor","AR1514",2)[ %TAB%%LNL%%MNL%%WNL%]+[ %TAB%%LNL%%MNL%%WNL%]+OR(2)[ %TAB%%LNL%%MNL%%WNL%]+Class(Player1,MAGE_ALL)[ %TAB%%LNL%%MNL%%WNL%]+Class(Player1,DRUID_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,FIGHTER_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,THIEF_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,CLERIC_ALL)~
+      ~Global("Iaitem2","AR1514",0) Global("closedDoor","AR1514",2)~
+    REPLACE_TEXTUALLY
+      ~SetGlobal("Iaitem","AR1514",1)[ %TAB%%LNL%%MNL%%WNL%]+GiveItemCreate("S!misc01",Player1,0,0,0)~
+      ~SetGlobal("Iaitem2","AR1514",1) GiveItemCreate("S!misc01",Player1,0,0,0)~
+  END
+
+// Scrolls in Planar Sphere
+COPY_EXISTING ~AR0410.BCS~ ~override\AR0410.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~Class(Player1,MAGE_ALL)~ ~~
+    REPLACE_TEXTUALLY ~!Class(Player1,FIGHTER_ALL)~ ~~
+    REPLACE_TEXTUALLY ~!Class(Player1,THIEF_ALL)~ ~~
+    REPLACE_TEXTUALLY ~!Class(Player1,CLERIC_ALL)~ ~~
+  END
+
+// Scrolls in Planar Sphere, the global counter
+COPY_EXISTING ~BALDUR.BCS~ ~override\BALDUR.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY
+      ~Class(Player1,MAGE_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,FIGHTER_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,THIEF_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,CLERIC_ALL)[ %TAB%%LNL%%MNL%%WNL%]+GlobalGT("LavokOutside","GLOBAL",0)~
+      ~GlobalGT("LavokOutside","GLOBAL",0)~
+  END
+
+
+// Rewards from the Swanmay in Umar Hills
+COPY_EXISTING ~AR1100.BCS~ ~override\AR1100.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY
+      ~Global("ShadowLordDead","GLOBAL",1)[ %TAB%%LNL%%MNL%%WNL%]+Global("Iacreature","AR1100",0)[ %TAB%%LNL%%MNL%%WNL%]+Class(Player1,RANGER_ALL)~
+      ~Global("ShadowLordDead","GLOBAL",1) Global("Iacreature","AR1100",0)~
+  END
+
+// Potions inside the ranger cabin in Umar Hills
+COPY_EXISTING ~AR1107.BCS~ ~override\AR1107.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~Global("Iaitem","AR1107",0)[ %TAB%%LNL%%MNL%%WNL%]+Class(Player1,RANGER_ALL)~ ~Global("Iaitem","AR1107",0)~
+  END

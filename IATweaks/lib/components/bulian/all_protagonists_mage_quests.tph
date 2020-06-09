@@ -1,0 +1,19 @@
+/// Remove class restrictions from the Gypsy quests and the Limak encounter. The Old Ones quest remains Necromancer-only. ///
+
+SILENT
+
+// The Limak encounter in the Docks
+COPY_EXISTING ~AR0300.BCS~ ~override\AR0300.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~Class(Player1,MAGE_ALL)~ ~~
+  END
+
+// The Planar Sphere Gypsy quests
+// note that the checks for the Old One are written in the sequence Fighter/Cleric/Thief and have a KIT(Necromancer) check, whereas the Gypsy quest blocks have the Fighter/Thief/Cleric sequence, and ROTA checks for Sorcerer as well
+COPY_EXISTING ~AR0411.BCS~ ~override\AR0411.BCS~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~Class(Player1,MAGE_ALL)
+  !Class(Player1,FIGHTER_ALL)
+  !Class(Player1,THIEF_ALL)
+  !Class(Player1,CLERIC_ALL)~ ~~
+  END

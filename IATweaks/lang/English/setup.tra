@@ -1,6 +1,7 @@
 @0 = ~Requires Improved Anvil to be installed~
 @1 = ~Quality of life~
 @2 = ~Custom kits for joinable characters~
+@3 = ~Bulian's Tweaks & Miscellanea~
 
 @10 = ~NPCs will not complain about reputation and leave~
 @11 = ~Identify all items~
@@ -22,3 +23,8 @@
 @45 = ~Fighter->Mage~
 @46 = ~Barbarian~
 @47 = ~Dwarven Defender~
+
+@60 = ~The Gypsy questline and the Limak encounter are available for non-mage protagonists~
+@61 = ~The Shimmering Light and The Good, the Bad and the Ugly quest lines are available for non-ranger protagonists~
+@62 = ~Non-essential class- and kit-based drops are available to all protagonists~
+@63 = ~Mage- and ranger-specific rewards and crafted items are available for all protagonists~

@@ -124,3 +124,33 @@ GROUP @2 SUBCOMPONENT @26
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/korgan_dd.tph"
+
+/// bulian's tweaks ///
+
+BEGIN @60 DESIGNATED 17
+GROUP @3
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/bulian/all_protagonists_mage_quests.tph"
+
+BEGIN @61 DESIGNATED 18
+GROUP @3
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/bulian/all_protagonists_ranger_quests.tph"
+
+BEGIN @62 DESIGNATED 19
+GROUP @3
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/bulian/all_protagonists_extra_rewards.tph"
+
+BEGIN @63 DESIGNATED 20
+GROUP @3
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/bulian/all_protagonists_items.tph"
