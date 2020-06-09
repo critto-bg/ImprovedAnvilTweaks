@@ -22,3 +22,12 @@ GROUP @1
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/id_all_items.tph"
+
+/// Simplified economy ///
+
+BEGIN @12 DESIGNATED 2
+GROUP @1
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/simplified_economy.tph"
