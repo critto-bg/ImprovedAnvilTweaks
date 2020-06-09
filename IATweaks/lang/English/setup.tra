@@ -1,6 +1,24 @@
 @0 = ~Requires Improved Anvil to be installed~
 @1 = ~Quality of life~
+@2 = ~Custom kits for joinable characters~
 
 @10 = ~NPCs will not complain about reputation and leave~
 @11 = ~Identify all items~
 @12 = ~Simplified economy~
+
+@20 = ~Custom kit: Imoen~
+@21 = ~Custom kit: Minsc~
+@22 = ~Custom kit: Valygar~
+@23 = ~Custom kit: Nalia~
+@24 = ~Custom kit: Yoshimo~
+@25 = ~Custom kit: Sarevok~
+@26 = ~Custom kit: Korgan~
+
+@40 = ~Riskbreaker~
+@41 = ~Kensai~
+@42 = ~Berserker~
+@43 = ~Protector~
+@44 = ~Vagrant~
+@45 = ~Fighter->Mage~
+@46 = ~Barbarian~
+@47 = ~Dwarven Defender~
