@@ -63,7 +63,7 @@ COPY_EXISTING ~BOTSMITH.DLG~ ~override\BOTSMITH.DLG~
   END
 
 // Cromwell dialogue
-COPY_EXISTING ~override\WSMITH01.DLG~ ~override\WSMITH01.DLG~
+COPY_EXISTING ~WSMITH01.DLG~ ~override\WSMITH01.DLG~
   DECOMPILE_AND_PATCH BEGIN
     REPLACE_TEXTUALLY ~Class(Player1,RANGER_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,CLERIC_ALL)[ %TAB%%LNL%%MNL%%WNL%]+Global("Iaflailplace","GLOBAL",3)~ ~Global("Iaflailplace","GLOBAL",3)~
     REPLACE_TEXTUALLY ~PartyHasItem("waflail")[ %TAB%%LNL%%MNL%%WNL%]+Class(Player1,RANGER_ALL)[ %TAB%%LNL%%MNL%%WNL%]+!Class(Player1,CLERIC_ALL)~ ~PartyHasItem("waflail")~
