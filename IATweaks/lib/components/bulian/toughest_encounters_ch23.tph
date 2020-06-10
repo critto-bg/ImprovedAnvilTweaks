@@ -1,0 +1,5 @@
+/// Enable the hardest versions of the fights and random spawns in chapters 2&3. ///
+
+SILENT
+
+EXTEND_BOTTOM ~AR0602.BCS~ ~IATweaks/scripts/patches/AR0602_iahardmode.baf~
