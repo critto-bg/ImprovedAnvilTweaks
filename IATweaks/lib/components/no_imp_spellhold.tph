@@ -1,0 +1,6 @@
+SILENT
+
+COPY_EXISTING ~AR1512.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~SetGlobal("Iapctoohigh","GLOBAL",1)~ ~ActionOverride("ppAltar",CreateItem("amul12",0,0,0))~
+  END

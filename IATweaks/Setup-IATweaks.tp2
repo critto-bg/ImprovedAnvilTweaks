@@ -32,9 +32,18 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~)
 
 INCLUDE "IATweaks/lib/components/simplified_economy.tph"
 
+/// Disable hardened spellhold ///
+
+BEGIN @13 DESIGNATED 3
+GROUP @1
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/no_imp_spellhold.tph"
+
 /// Custom kits ///
 
-BEGIN @40 DESIGNATED 3
+BEGIN @40 DESIGNATED 4
 GROUP @2 SUBCOMPONENT @20
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
