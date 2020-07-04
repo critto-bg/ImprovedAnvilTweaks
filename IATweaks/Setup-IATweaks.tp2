@@ -134,6 +134,13 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~)
 
 INCLUDE "IATweaks/lib/components/custom_kits/korgan_dd.tph"
 
+BEGIN @48 DESIGNATED 213
+GROUP @2 SUBCOMPONENT @27
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/custom_kits/keldorn_uh.tph"
+
 /// bulian's tweaks ///
 
 BEGIN @60 DESIGNATED 300

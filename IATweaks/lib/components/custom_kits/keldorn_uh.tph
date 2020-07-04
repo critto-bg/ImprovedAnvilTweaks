@@ -1,0 +1,13 @@
+/// Custom kits: makes Keldorn into a Undead Hunter ///
+
+SILENT
+
+COPY_EXISTING ~keldor8.CRE~ ~override/keldor8.CRE~
+              ~keldor14.CRE~ ~override/keldor14.CRE~
+  WRITE_SHORT 0x246 0x4006 // kit
+
+COPY_EXISTING ~keldor8.cre~ ~Override/keldor9.cre~
+
+COPY_EXISTING ~keldor8.cre~ ~Override/keldor10.cre~
+
+COPY_EXISTING ~keldor8.cre~ ~Override/keldor12.cre~
