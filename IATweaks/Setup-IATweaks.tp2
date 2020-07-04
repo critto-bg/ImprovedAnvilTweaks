@@ -9,7 +9,7 @@ LANGUAGE "English"
 
 /// Reputation patch ///
 
-BEGIN @10 DESIGNATED 0
+BEGIN @10 DESIGNATED 100
 GROUP @1
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
@@ -17,7 +17,7 @@ INCLUDE "IATweaks/lib/components/happy_npc.tph"
 
 /// ID all items ///
 
-BEGIN @11 DESIGNATED 1
+BEGIN @11 DESIGNATED 101
 GROUP @1
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
@@ -25,7 +25,7 @@ INCLUDE "IATweaks/lib/components/id_all_items.tph"
 
 /// Simplified economy ///
 
-BEGIN @12 DESIGNATED 2
+BEGIN @12 DESIGNATED 102
 GROUP @1
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
@@ -34,7 +34,7 @@ INCLUDE "IATweaks/lib/components/simplified_economy.tph"
 
 /// Disable hardened spellhold ///
 
-BEGIN @13 DESIGNATED 3
+BEGIN @13 DESIGNATED 103
 GROUP @1
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
@@ -43,91 +43,91 @@ INCLUDE "IATweaks/lib/components/no_imp_spellhold.tph"
 
 /// Custom kits ///
 
-BEGIN @40 DESIGNATED 4
+BEGIN @40 DESIGNATED 200
 GROUP @2 SUBCOMPONENT @20
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/imoen_rb.tph"
 
-BEGIN @41 DESIGNATED 5
+BEGIN @41 DESIGNATED 201
 GROUP @2 SUBCOMPONENT @20
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/imoen_kensai.tph"
 
-BEGIN @42 DESIGNATED 6
+BEGIN @42 DESIGNATED 202
 GROUP @2 SUBCOMPONENT @21
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/minsc_berserker.tph"
 
-BEGIN @43 DESIGNATED 7
+BEGIN @43 DESIGNATED 203
 GROUP @2 SUBCOMPONENT @21
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/minsc_protector.tph"
 
-BEGIN @44 DESIGNATED 8
+BEGIN @44 DESIGNATED 204
 GROUP @2 SUBCOMPONENT @22
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/valygar_vagrant.tph"
 
-BEGIN @40 DESIGNATED 9
+BEGIN @40 DESIGNATED 205
 GROUP @2 SUBCOMPONENT @22
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/valygar_rb.tph"
 
-BEGIN @45 DESIGNATED 10
+BEGIN @45 DESIGNATED 206
 GROUP @2 SUBCOMPONENT @23
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/nalia_fm.tph"
 
-BEGIN @40 DESIGNATED 11
+BEGIN @40 DESIGNATED 207
 GROUP @2 SUBCOMPONENT @24
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/yoshimo_rb.tph"
 
-BEGIN @41 DESIGNATED 12
+BEGIN @41 DESIGNATED 208
 GROUP @2 SUBCOMPONENT @24
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/yoshimo_kensai.tph"
 
-BEGIN @41 DESIGNATED 13
+BEGIN @41 DESIGNATED 209
 GROUP @2 SUBCOMPONENT @25
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/sarevok_kensai.tph"
 
-BEGIN @42 DESIGNATED 14
+BEGIN @42 DESIGNATED 210
 GROUP @2 SUBCOMPONENT @25
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/sarevok_berserker.tph"
 
-BEGIN @46 DESIGNATED 15
+BEGIN @46 DESIGNATED 211
 GROUP @2 SUBCOMPONENT @26
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/custom_kits/korgan_barbarian.tph"
 
-BEGIN @47 DESIGNATED 16
+BEGIN @47 DESIGNATED 212
 GROUP @2 SUBCOMPONENT @26
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
@@ -136,35 +136,35 @@ INCLUDE "IATweaks/lib/components/custom_kits/korgan_dd.tph"
 
 /// bulian's tweaks ///
 
-BEGIN @60 DESIGNATED 17
+BEGIN @60 DESIGNATED 300
 GROUP @3
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/all_protagonists_mage_quests.tph"
 
-BEGIN @61 DESIGNATED 18
+BEGIN @61 DESIGNATED 301
 GROUP @3
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/all_protagonists_ranger_quests.tph"
 
-BEGIN @62 DESIGNATED 19
+BEGIN @62 DESIGNATED 302
 GROUP @3
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/all_protagonists_extra_rewards.tph"
 
-BEGIN @63 DESIGNATED 20
+BEGIN @63 DESIGNATED 303
 GROUP @3
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/all_protagonists_items.tph"
 
-BEGIN @64 DESIGNATED 21
+BEGIN @64 DESIGNATED 304
 GROUP @3
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
