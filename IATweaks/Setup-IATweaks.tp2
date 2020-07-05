@@ -13,7 +13,7 @@ BEGIN @10 DESIGNATED 100
 GROUP @1
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
-INCLUDE "IATweaks/lib/components/happy_npc.tph"
+INCLUDE "IATweaks/lib/components/quality/happy_npc.tph"
 
 /// ID all items ///
 
@@ -21,7 +21,7 @@ BEGIN @11 DESIGNATED 101
 GROUP @1
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
-INCLUDE "IATweaks/lib/components/id_all_items.tph"
+INCLUDE "IATweaks/lib/components/quality/id_all_items.tph"
 
 /// Simplified economy ///
 
@@ -30,7 +30,7 @@ GROUP @1
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
-INCLUDE "IATweaks/lib/components/simplified_economy.tph"
+INCLUDE "IATweaks/lib/components/quality/simplified_economy.tph"
 
 /// Disable hardened spellhold ///
 
@@ -39,7 +39,7 @@ GROUP @1
 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
-INCLUDE "IATweaks/lib/components/no_imp_spellhold.tph"
+INCLUDE "IATweaks/lib/components/quality/no_imp_spellhold.tph"
 
 /// Custom kits ///
 
