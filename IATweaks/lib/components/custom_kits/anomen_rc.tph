@@ -1,0 +1,68 @@
+/// Custom kits: makes Anomen into a Ranger->Cleric ///
+
+SILENT
+
+COPY_EXISTING ~anomen6.cre~ ~override/anomen6.cre~
+  WRITE_BYTE  0x10 0b00000000 // remove original class
+  WRITE_BYTE  0x11 0b00000001 // add original class
+  WRITE_BYTE  0x241 126       // racial enemy: vampire
+  WRITE_BYTE  0x273 18        // cleric/ranger class
+
+  SPRINT ~opcode_to_delete~ ~233~
+  LAUNCH_PATCH_MACRO ~DELETE_CRE_EFFECT~
+
+  // warhammer
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 18
+    parameter2 = 97
+  END
+
+  // flail
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 18
+    parameter2 = 100
+  END
+
+  // club
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 18
+    parameter2 = 115
+  END
+
+  // dual-wielding
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 18
+    parameter2 = 114
+  END
+
+  // quarterstaff
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 2
+    parameter2 = 102
+  END
+
+  // sword & shield
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 2
+    parameter2 = 112
+  END
+
+COPY_EXISTING ~anomen6.cre~ ~override/anomen7.cre~
+
+COPY_EXISTING ~anomen6.cre~ ~override/anomen8.cre~
+
+COPY_EXISTING ~anomen6.cre~ ~override/anomen9.cre~
+
+COPY_EXISTING ~anomen6.cre~ ~override/anomen10.cre~
