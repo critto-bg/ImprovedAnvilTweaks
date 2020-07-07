@@ -111,11 +111,13 @@ PRINT "A few last changes..."
 SILENT
 
 COPY_EXISTING ~AR2401.are~ ~override/AR2401.are~
-  LAUNCH_PATCH_FUNCTION ~ADD_AREA_ITEM~
-    STR_VAR
-      item_to_add = ~dwdust~
-      container_to_add_to = ~1~
-      charges1 = ~5~
+  PATCH_FOR_EACH ~item_code~ IN ~dwplat01~ ~dwshld01~ ~dwblun01~ ~dwsw1h02~ ~dwxbow01~ ~dwsper01~ BEGIN
+    LPF ADD_AREA_ITEM
+      STR_VAR
+        item_to_add = EVALUATE_BUFFER ~%item_code%~
+        container_to_add_to = ~1~
+        charges1 = ~1~
+    END
   END
 
   BUT_ONLY
