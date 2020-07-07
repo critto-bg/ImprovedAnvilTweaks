@@ -41,6 +41,15 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~)
 
 INCLUDE "IATweaks/lib/components/quality/no_imp_spellhold.tph"
 
+/// Remove traps & locks ///
+
+BEGIN @14 DESIGNATED 104
+GROUP @1
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/quality/no_traps_locks.tph"
+
 /// Custom kits ///
 
 BEGIN @40 DESIGNATED 200

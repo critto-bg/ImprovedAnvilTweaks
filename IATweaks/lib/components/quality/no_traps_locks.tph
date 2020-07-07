@@ -1,0 +1,56 @@
+/// The patch removes traps & locks that do not require a key to open ///
+
+PRINT "Updating areas..."
+
+SILENT
+
+COPY_EXISTING_REGEXP GLOB ~.*\.are$~ ~override~
+
+  // process triggers //
+
+  GET_OFFSET_ARRAY regions ARE_V10_REGIONS
+
+  PHP_EACH regions AS int1 => region_off BEGIN
+    READ_SHORT region_off + 0x6a trap_diff // trap difficulty
+
+    PATCH_IF ((trap_diff > 0) AND (trap_diff < 100)) BEGIN
+      WRITE_SHORT region_off + 0x6c 0 // trap is set
+    END
+  END
+
+  // process containers //
+
+  GET_OFFSET_ARRAY containers ARE_V10_CONTAINERS
+
+  PHP_EACH containers AS int2 => cont_off BEGIN
+    READ_ASCII cont_off + 0x78 key // key item
+    READ_SHORT cont_off + 0x2c trap_diff // trap difficulty
+
+    PATCH_IF (("%key%" STRING_COMPARE_CASE "" = 0) OR ("%key%" STRING_COMPARE_CASE "None" = 0)) BEGIN
+      WRITE_SHORT cont_off + 0x26 0 // lock difficulty
+    END
+
+    PATCH_IF (trap_diff != 100) BEGIN
+      WRITE_SHORT cont_off + 0x30 0 // container is trapped
+    END
+  END
+
+  // process doors //
+
+  GET_OFFSET_ARRAY doors ARE_V10_DOORS
+
+  PHP_EACH doors AS int3 => door_off BEGIN
+    READ_SHORT door_off + 0x6c trap_diff // trap detection difficulty
+    READ_ASCII door_off + 0x78 key // key item
+    WRITE_LONG door_off + 0x88 0 // detection difficulty (secret doors)
+
+    PATCH_IF (trap_diff != 100) BEGIN
+      WRITE_SHORT door_off + 0x70 0 // door is trapped
+    END
+
+    PATCH_IF (("%key%" STRING_COMPARE_CASE "" = 0) OR ("%key%" STRING_COMPARE_CASE "None" = 0)) BEGIN
+      WRITE_LONG door_off + 0x8c 0 // lock difficulty
+    END
+  END
+
+  BUT_ONLY
