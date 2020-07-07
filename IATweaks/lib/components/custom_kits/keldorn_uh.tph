@@ -3,7 +3,22 @@
 SILENT
 
 COPY_EXISTING ~keldor8.CRE~ ~override/keldor8.CRE~
-              ~keldor14.CRE~ ~override/keldor14.CRE~
+  WRITE_SHORT 0x246 0x4006 // kit
+
+  SPRINT ~opcode_to_delete~ ~233~
+  LAUNCH_PATCH_MACRO ~DELETE_CRE_EFFECT~
+
+  // dual-wielding, flail, long sword
+  PATCH_FOR_EACH ~prof_code~ IN ~114~ ~100~ ~90~ BEGIN
+    LPF ~ADD_CRE_EFFECT~ INT_VAR
+      opcode = 233
+      timing = 9
+      parameter1 = 2
+      parameter2 = ~prof_code~
+    END
+  END
+
+COPY_EXISTING ~keldor14.CRE~ ~override/keldor14.CRE~
   WRITE_SHORT 0x246 0x4006 // kit
 
 COPY_EXISTING ~keldor8.cre~ ~Override/keldor9.cre~
