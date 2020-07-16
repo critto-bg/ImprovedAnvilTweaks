@@ -60,7 +60,7 @@ COPY_EXISTING ~AR1107.BCS~ ~override\AR1107.BCS~
     REPLACE_TEXTUALLY ~Class(Player1,RANGER_ALL)
   !Class(Player1,CLERIC_ALL)
   Kit(Player1,VAGRANT)
-  GlobalGT("Iarangerjob","GLOBAL",11)~ ~Global("Iarangerjob","GLOBAL",11)~
+  GlobalGT("Iarangerjob","GLOBAL",11)~ ~GlobalGT("Iarangerjob","GLOBAL",11)~
   END
 
 // Good, Bad n' Ugly, the Bridge encounter with Malbar
