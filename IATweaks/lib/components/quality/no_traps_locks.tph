@@ -42,13 +42,16 @@ COPY_EXISTING_REGEXP GLOB ~.*\.are$~ ~override~
   PHP_EACH doors AS int3 => door_off BEGIN
     READ_SHORT door_off + 0x6c trap_diff // trap detection difficulty
     READ_ASCII door_off + 0x78 key // key item
+    READ_LONG  door_off + 0x98 lock_msg // lockpick message
     WRITE_LONG door_off + 0x88 0 // detection difficulty (secret doors)
 
     PATCH_IF (trap_diff != 100) BEGIN
       WRITE_SHORT door_off + 0x70 0 // door is trapped
     END
 
-    PATCH_IF (("%key%" STRING_COMPARE_CASE "" = 0) OR ("%key%" STRING_COMPARE_CASE "None" = 0)) BEGIN
+    PATCH_IF ((("%key%" STRING_COMPARE_CASE "" = 0) OR ("%key%" STRING_COMPARE_CASE "None" = 0)) AND
+              (("%lock_msg%" STRING_COMPARE_CASE "0" = 0) OR ("%lock_msg%" STRING_COMPARE_CASE "-1" = 0)))
+    BEGIN
       WRITE_LONG door_off + 0x8c 0 // lock difficulty
     END
   END
