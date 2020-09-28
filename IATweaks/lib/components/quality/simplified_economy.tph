@@ -104,12 +104,13 @@ COMPILE ~IATweaks/resources/dlg/crom.simplified.d~
 COMPILE ~IATweaks/resources/dlg/cespy.simplified.d~
   USING ~%LANGUAGE%cespy.simplified.tra~
 
-// add some adamantine dust to the "exit from underdark" area //
+// add some stuff back manually for convenience //
 
 PRINT "A few last changes..."
 
 SILENT
 
+// add some adamantine items to the "exit from underdark" area
 COPY_EXISTING ~AR2401.are~ ~override/AR2401.are~
   PATCH_FOR_EACH ~item_code~ IN ~dwplat01~ ~dwshld01~ ~dwblun01~ ~dwsw1h02~ ~dwxbow01~ ~dwsper01~ BEGIN
     LPF ADD_AREA_ITEM
@@ -121,3 +122,8 @@ COPY_EXISTING ~AR2401.are~ ~override/AR2401.are~
   END
 
   BUT_ONLY
+
+// add some crafting ingredients for sale to Roger the Fence
+COPY_EXISTING ~roger.sto~ ~override/roger.sto~
+  ADD_STORE_ITEM ~amul09~ LAST #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ #3
+  ADD_STORE_ITEM ~misc42~ #1 #1 #1 ~IDENTIFIED&UNSTEALABLE~ #5
