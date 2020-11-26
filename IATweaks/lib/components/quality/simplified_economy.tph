@@ -85,7 +85,8 @@ END
 ACTION_PHP_EACH economy_creatures_gold AS record => int BEGIN
   ACTION_IF FILE_EXISTS_IN_GAME ~%record_0%.cre~ BEGIN
     COPY_EXISTING ~%record_0%.cre~ ~override/%record_0%.cre~
-      ADD_CRE_ITEM ~MISC07~ (~%record_1%~) #0 #0 ~UNSTEALABLE~ ~INV~
+      // a bit of a hack because of gpuse.bcs which is hardcoded to consume items from specific inventory slots
+      ADD_CRE_ITEM ~MISC07~ (~%record_1%~) #0 #0 ~UNSTEALABLE~ ~INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
 
       BUT_ONLY
   END
