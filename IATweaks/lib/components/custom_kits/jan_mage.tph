@@ -1,0 +1,46 @@
+/// Custom kits: makes Jan into a single class illusionist ///
+
+SILENT
+
+COPY_EXISTING ~jan8.cre~ ~Override/jan8.cre~
+  WRITE_BYTE  0x10      0b00000000 // remove original class
+  WRITE_BYTE  0x64      0 // Detect Illusion
+  WRITE_BYTE  0x67      0 // Open Locks
+  WRITE_BYTE  0x69      0 // Find traps
+  WRITE_BYTE  0x6a      0 // Pick pockets
+  WRITE_BYTE  0x23b     18 // wisdom
+  WRITE_BYTE  0x23c     13 // dexterity
+
+  WRITE_BYTE  0x273 1  // current class (mage)
+
+  SPRINT ~opcode_to_delete~ ~233~
+  LAUNCH_PATCH_MACRO ~DELETE_CRE_EFFECT~
+
+  // staff
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 1 // active: 1 / original: 0
+    parameter2 = 102
+    probability1 = 100
+  END
+
+  // dagger
+  LPF ~ADD_CRE_EFFECT~ INT_VAR
+    opcode = 233
+    timing = 9
+    parameter1 = 1 // active: 1 / original: 0
+    parameter2 = 96
+    probability1 = 100
+  END
+
+COPY_EXISTING ~jan8.cre~ ~Override/jan10.cre~
+
+COPY_EXISTING ~jan8.cre~ ~Override/jan11.cre~
+
+COPY_EXISTING ~jan8.cre~ ~Override/jan12.cre~
+
+COPY_EXISTING ~npmisc2.itm~ ~override/npmisc2.itm~
+              ~npmisc1.itm~ ~override/npmisc1.itm~
+              ~nparm.itm~ ~override/nparm.itm~
+  WRITE_BYTE 0x002c 0 // min dex
