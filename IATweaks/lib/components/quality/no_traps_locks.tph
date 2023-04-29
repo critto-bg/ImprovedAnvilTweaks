@@ -53,7 +53,8 @@ COPY_EXISTING_REGEXP GLOB ~.*\.are$~ ~override~
 
     PATCH_IF ((("%key%" STRING_COMPARE_CASE "" = 0) OR ("%key%" STRING_COMPARE_CASE "None" = 0)) AND
               (("%lock_msg%" STRING_COMPARE_CASE "0" = 0) OR ("%lock_msg%" STRING_COMPARE_CASE "-1" = 0)) AND
-              ("%door_name%" STRING_EQUAL_CASE "Door0308" = 0))
+              ("%door_name%" STRING_EQUAL_CASE "Door0308" = 0) AND
+              ("%door_name%" STRING_EQUAL_CASE "SECSTAIR" = 0))
     BEGIN
       WRITE_LONG door_off + 0x8c 0 // lock difficulty
     END
