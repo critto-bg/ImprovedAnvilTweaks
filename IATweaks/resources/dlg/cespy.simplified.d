@@ -234,8 +234,8 @@ ALTER_TRANS BOTSMITH
   BEGIN 242 END
   BEGIN 1 END
 BEGIN
-  "TRIGGER" ~Global("Iaplat04forged","GLOBAL",0) Reputation(Player1,20) PartyHasItem("npplat") PartyHasItem("belt10") PartyHasItem("plat17") PartyHasItem("S!misc06") NumItemsPartyGT("misc6z",2) PartyGoldGT(74999)~
-  "ACTION" ~TakePartyGold(75000) DestroyGold(75000) TakePartyItemNum("npplat",1) DestroyItem("npplat") TakePartyItemNum("belt10",1) DestroyItem("belt10") TakePartyItemNum("plat17",1) DestroyItem("plat17") TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06") TakePartyItemNum("misc6z",3) DestroyItem("misc6z") DestroyItem("misc6z") DestroyItem("misc6z") SetGlobal("Iaplat04forged","GLOBAL",1) GiveItemCreate("S!plat04",Player1,1,1,1) CreateVisualEffect("spcrtwpn",[401.348])~
+  "TRIGGER" ~Global("Iaplat04forged","GLOBAL",0) Reputation(Player1,20) PartyHasItem("npplat") PartyHasItem("npsw03") PartyHasItem("plat16") PartyHasItem("plat17") PartyHasItem("scrl7j") PartyHasItem("S!misc06") NumItemsPartyGT("misc6z",2) PartyGoldGT(74999)~
+  "ACTION" ~TakePartyGold(75000) DestroyGold(75000) TakePartyItemNum("npplat",1) DestroyItem("npplat") TakePartyItemNum("npsw03",1) DestroyItem("npsw03") TakePartyItemNum("plat16",1) DestroyItem("plat16") TakePartyItemNum("plat17",1) DestroyItem("plat17") TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06") TakePartyItemNum("misc6z",3) DestroyItem("misc6z") DestroyItem("misc6z") DestroyItem("misc6z") SetGlobal("Iaplat04forged","GLOBAL",1) GiveItemCreate("S!plat04",Player1,1,1,1) CreateVisualEffect("spcrtwpn",[401.348])~
 END
 
 REPLACE_SAY BOTSMITH 242 @673
