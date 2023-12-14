@@ -211,6 +211,6 @@ INCLUDE "IATweaks/lib/components/bulian/toughest_encounters_ch23.tph"
 BEGIN @65 DESIGNATED 304
 GROUP @3
 
-REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~1~) @0
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/all_protagonists_druid_quests.tph"
