@@ -1,0 +1,5 @@
+/// Enable the druid stronghold for all protagonists. ///
+
+SILENT
+
+EXTEND_TOP ~AR1901.BCS~ ~IATweaks\scripts\AR1901.baf~
