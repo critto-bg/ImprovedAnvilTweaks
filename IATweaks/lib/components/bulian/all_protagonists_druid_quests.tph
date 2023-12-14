@@ -2,4 +2,4 @@
 
 SILENT
 
-EXTEND_TOP ~AR1901.BCS~ ~IATweaks\scripts\AR1901.baf~
+EXTEND_TOP ~AR1901.BCS~ ~IATweaks/scripts/patches/AR1901.baf~
