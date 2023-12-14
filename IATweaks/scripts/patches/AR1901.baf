@@ -1,0 +1,6 @@
+IF
+    Global("IADruidPlot","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IADruidPlot","GLOBAL",1)
+END
