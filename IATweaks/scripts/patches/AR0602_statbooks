@@ -1,0 +1,7 @@
+IF
+  Global("Iastatbooks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    
+    SetGlobal("Iastatbooks","GLOBAL",1)
+END
