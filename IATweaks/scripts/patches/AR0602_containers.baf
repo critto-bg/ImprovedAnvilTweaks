@@ -1,4 +1,4 @@
-//Creates early containers and places them on bookshelf in Irenicus's office //
+//Creates early containers and places them on a table in Irenicus's office //
 
 IF
   Global("Iacontainers","GLOBAL",0)
