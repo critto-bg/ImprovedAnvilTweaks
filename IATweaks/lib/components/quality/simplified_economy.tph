@@ -99,12 +99,6 @@ PRINT "Updating dialogues..."
 
 SILENT
 
-COMPILE ~IATweaks/resources/dlg/crom.simplified.d~
-  USING ~%LANGUAGE%crom.simplified.tra~
-
-COMPILE ~IATweaks/resources/dlg/cespy.simplified.d~
-  USING ~%LANGUAGE%cespy.simplified.tra~
-
 // add some stuff back manually for convenience //
 
 PRINT "A few last changes..."

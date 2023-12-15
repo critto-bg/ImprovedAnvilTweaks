@@ -1,0 +1,5 @@
+/// Add stat books to Irenicus dungeon. ///
+
+SILENT
+
+EXTEND_BOTTOM ~AR0602.BCS~ ~IATweaks/scripts/patches/AR0602_statbooks.baf~
