@@ -43,7 +43,7 @@ COPY - "IATweaks/lib/tables/economy_creatures_gold.2da" "inlined/economy_creatur
 
 // replace the items //
 
-PRINT "Replacing items in the containers with gold..."
+PRINT "Replacing items in containers with gold..."
 
 SILENT
 
@@ -92,19 +92,6 @@ ACTION_PHP_EACH economy_creatures_gold AS record => int BEGIN
   END
 END
 
-// do the cosmetics //
-
-// text lines inside the translation files are numbered according to the original numbers from cespy.tra / crom.tra in the main mod
-PRINT "Updating dialogues..."
-
-SILENT
-
-COMPILE ~IATweaks/resources/dlg/crom.simplified.d~
-  USING ~%LANGUAGE%crom.simplified.tra~
-
-COMPILE ~IATweaks/resources/dlg/cespy.simplified.d~
-  USING ~%LANGUAGE%cespy.simplified.tra~
-
 // add some stuff back manually for convenience //
 
 PRINT "A few last changes..."
@@ -123,8 +110,3 @@ COPY_EXISTING ~AR2401.are~ ~override/AR2401.are~
   END
 
   BUT_ONLY
-
-// add some crafting ingredients for sale to Roger the Fence
-COPY_EXISTING ~roger.sto~ ~override/roger.sto~
-  ADD_STORE_ITEM ~amul09~ LAST #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ #3
-  ADD_STORE_ITEM ~misc42~ #1 #1 #1 ~IDENTIFIED&UNSTEALABLE~ #5
