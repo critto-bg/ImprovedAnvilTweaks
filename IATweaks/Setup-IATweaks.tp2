@@ -171,6 +171,13 @@ REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~)
 
 INCLUDE "IATweaks/lib/components/custom_kits/jan_mage.tph"
 
+BEGIN @51 DESIGNATED 217
+GROUP @2 SUBCOMPONENT @30
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/custom_kits/neera_sorceress.tph"
+
 /// bulian's tweaks ///
 
 BEGIN @60 DESIGNATED 300
