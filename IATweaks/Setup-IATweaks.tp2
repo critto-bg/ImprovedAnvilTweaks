@@ -221,3 +221,8 @@ GROUP @3
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/stat_books.tph"
+
+BEGIN @66 DESIGNATED 306
+GROUP @3
+
+INCLUDE "IATweaks/lib/components/bulian/containers.tph"

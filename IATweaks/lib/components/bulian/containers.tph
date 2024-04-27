@@ -1,0 +1,18 @@
+/// Add gem bag, potion case, scroll case and ammo case to Irenicus dungeon ///
+
+SILENT
+
+EXTEND_BOTTOM ~AR0602.BCS~ ~IATweaks/scripts/patches/AR0602_containers.baf~
+
+COPY_EXISTING ~AR3001.are~ ~override/AR3001.are~
+  SPRINT ~item_to_delete~ ~bag05~
+  LAUNCH_PATCH_MACRO ~DELETE_AREA_ITEM~
+
+COPY_EXISTING ~scrolls.sto~ ~override/scrolls.sto~
+  REMOVE_STORE_ITEM ~bag06~
+
+COPY_EXISTING ~bernard.sto~ ~override/bernard.sto~
+  REMOVE_STORE_ITEM ~bag03~
+
+COPY_EXISTING ~ribald.sto~ ~override/ribald.sto~
+  REMOVE_STORE_ITEM ~bag02~

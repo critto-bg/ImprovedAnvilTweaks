@@ -1,0 +1,12 @@
+// creates early containers and places them on a table in Irenicus's office //
+
+IF
+  Global("IaContainers","AR0602",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaContainers","AR0602",1)
+    ActionOverride("Table 5",CreateItem("bag05",0,0,0))  // Ammo belt
+    ActionOverride("Table 5",CreateItem("bag06",0,0,0))  // Potion Case
+    ActionOverride("Table 5",CreateItem("bag03",0,0,0))  // Scroll Case
+    ActionOverride("Table 5",CreateItem("bag02",0,0,0))  // Gem Bag
+END
