@@ -214,3 +214,10 @@ GROUP @3
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
 
 INCLUDE "IATweaks/lib/components/bulian/toughest_encounters_ch23.tph"
+
+BEGIN @65 DESIGNATED 305
+GROUP @3
+
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~ImprovedAnvil/Setup-ImprovedAnvil.tp2~ ~0~) @0
+
+INCLUDE "IATweaks/lib/components/bulian/stat_books.tph"

@@ -1,0 +1,16 @@
+// creates BG1 stat books and places them on the bookshelf in Irenicus's office //
+
+IF
+  Global("IaStatBooks","AR0602",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaStatBooks","AR0602",1)
+    ActionOverride("Shelf 17",CreateItem("book03",0,0,0))  // Manual of Bodily Health (CON)
+    ActionOverride("Shelf 17",CreateItem("book04",0,0,0))  // Manual of Gainful Exercise (Strength)
+    ActionOverride("Shelf 17",CreateItem("book05",0,0,0))  // Manual of Quickness (DEX)
+    ActionOverride("Shelf 17",CreateItem("book06",0,0,0))  // Tome of Clear Thought (IINT)
+    ActionOverride("Shelf 17",CreateItem("book07",0,0,0))  // Tome of Leadership (CHA)
+    ActionOverride("Shelf 17",CreateItem("book08",0,0,0))  // Tome of Understanding (WIS)
+    ActionOverride("Shelf 17",CreateItem("book08",0,0,0))  // Tome of Understanding (WIS)
+    ActionOverride("Shelf 17",CreateItem("book08",0,0,0))  // Tome of Understanding (WIS)
+END
