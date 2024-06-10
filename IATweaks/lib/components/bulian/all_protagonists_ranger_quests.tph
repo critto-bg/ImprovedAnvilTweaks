@@ -51,7 +51,9 @@ COPY_EXISTING ~AR0404.BCS~ ~override\AR0404.BCS~
 // Grandfather of Assassins note in the sewers beneath Copper Coronet
 COPY_EXISTING ~BALDUR.BCS~ ~override\BALDUR.BCS~
   DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~!Class(Player1,RANGER_ALL)~ ~placeholder~
     REPLACE_TEXTUALLY ~Class(Player1,RANGER_ALL)~ ~~
+    REPLACE_TEXTUALLY ~placeholder~ ~!Class(Player1,RANGER_ALL)~
   END
 
 // Good, Bad n' Ugly, ranger cabin
